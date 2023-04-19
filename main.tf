@@ -11,7 +11,7 @@ locals {
   vpc_id           = "vpc-0dbd537f0fe62e7a1"
   subnet_id        = "subnet-0fe4df3018b793164"
   ssh_user         = "ec2-user"
-  key_name         = "linux"
+  key_name         = "3tier"
   private_key_path = "/home/ubuntu/3tier.pem"
 }
 
