@@ -8,11 +8,11 @@ terraform {
 }
 
 locals {
-  vpc_id           = "vpc-0e26492b7fb53c3a1"
-  subnet_id        = "subnet-0adb875f4f4250807"
+  vpc_id           = "vpc-01bd8dfbca63589e0"
+  subnet_id        = "subnet-0fff856dcab65951c"
   ssh_user         = "ec2-user"
   key_name         = "password"
-  private_key_path = "/home/ec2-user/password.pem"
+  private_key_path = "/home/ec2-user/new-key.pem"
 }
 
 provider "aws" {
@@ -47,7 +47,7 @@ resource "aws_security_group" "httpd" {
 
 resource "aws_instance" "httpd" {
   ami                         = "ami-07d3a50bd29811cd1"
-  subnet_id                   = "subnet-0adb875f4f4250807"
+  subnet_id                   = "subnet-0fff856dcab65951c"
   instance_type               = "t2.micro"
   associate_public_ip_address = true
   security_groups             = [aws_security_group.httpd.id]
