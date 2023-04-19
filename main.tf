@@ -17,7 +17,7 @@ locals {
 
 provider "aws" {
   region = "ap-south-1"
-  profile = "default"
+  shared_credentials_files = "/home/ec2-user/.aws/credentials"
 }
 
 resource "aws_security_group" "httpd" {
