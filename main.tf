@@ -11,7 +11,7 @@ locals {
   vpc_id           = "vpc-01bd8dfbca63589e0"
   subnet_id        = "subnet-0fff856dcab65951c"
   ssh_user         = "ec2-user"
-  key_name         = "password"
+  key_name         = "new-key"
   private_key_path = "/home/ec2-user/new-key.pem"
 }
 
