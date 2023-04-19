@@ -1,24 +1,25 @@
 ---
 
 - name: installation of git
-  yum:
-    name: git
-    state: present
- 
-- name: cloning code from git hub
-  git:
-    repo: https://github.com/wahtej/php.git
-    dest: /php
+  yum:
+    name: git
+    state: present
+
+- name: cloning code from git hub 
+  git:
+    repo: https://github.com/wahtej/php.git
+    dest: /php 
+
 
 - name: install dependencies
-  command: yum install -y httpd wget php-fpm php-mysqli php-json php php-devel
-  become: true
+  command: yum install -y httpd wget php-fpm php-mysqli php-json php php-devel
+  become: true
 
 - name: Make sure apache is running
-  systemd:
-    state: started
-    name: httpd
+  systemd:
+    state: started
+    name: httpd
 
 - name: moving code to default directory
-  become: true
-  command: mv /php /var/www/html
+  become: true
+  command: mv /php /var/www/html
