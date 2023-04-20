@@ -11,13 +11,13 @@ locals {
   vpc_id           = "vpc-0dbd537f0fe62e7a1"
   subnet_id        = "subnet-0fe4df3018b793164"
   ssh_user         = "ec2-user"
-  key_name         = "3tier"
+  key_name         = "linux"
   private_key_path = "/home/ec2-user/linux.pem"
 }
 
 provider "aws" {
   region = "ap-south-1"
-  shared_credentials_file = "/home/ec2-user/.aws/credentials"
+  shared_credentials_file = ["/home/ec2-user/.aws/credentials"]
 }
 
 resource "aws_security_group" "httpd" {
