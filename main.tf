@@ -12,7 +12,7 @@ locals {
   subnet_id        = "subnet-0fe4df3018b793164"
   ssh_user         = "ec2-user"
   key_name         = "3tier"
-  private_key_path = "/home/ubuntu/3tier.pem"
+  private_key_path = "/home/ec2-user/linux.pem"
 }
 
 provider "aws" {
@@ -47,7 +47,7 @@ resource "aws_security_group" "httpd" {
 }
 
 resource "aws_instance" "httpd" {
-  ami                         = "ami-06fc49795bc410a0c"
+  ami                         = "ami-07d3a50bd29811cd1"
   subnet_id                   = "subnet-0fe4df3018b793164"
   instance_type               = "t2.micro"
   associate_public_ip_address = true
