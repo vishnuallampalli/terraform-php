@@ -12,7 +12,7 @@ locals {
   subnet_id        = "subnet-0fe4df3018b793164"
   ssh_user         = "ec2-user"
   key_name         = "linux"
-  private_key_path = "/var/lib/jenkins/workspace"
+  private_key_path = "/var/lib/jenkins/workspace/linux.pem"
 }
 
 provider "aws" {
